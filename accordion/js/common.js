@@ -1,8 +1,11 @@
 'use strict';
 
-//dt取得してaccordionとする
-const accordion = document.querySelector('dt');
+//dt取得してaccordionHeaderとする
+const accordionHeader = document.querySelectorAll('dt');
 
-accordion.addEventListener('click', () => {
-  accordion.parentNode.classList.toggle('open');
+//accordionごとに繰り返す
+accordionHeader.forEach((accordion) => {
+  accordion.addEventListener('click', () => {
+    accordionHeader.parentNode.classList.toggle('open');
+  });
 });
